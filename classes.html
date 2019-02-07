@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    classes
+    <h1>C.R.U.D. on classes</h1>
+
+    <br><br>
+    <h2>Create your class!</h2>
+    <br>
+    <form action="/form_handler.php">
+      <!-- need this to be auto-generated, maybe don't need this here at all, only for delete? -->
+      <input type="hidden" name="Class_ID" value="id">
+
+      Class_Name:<br>
+      <input type="text" name="Class_Name" value=""><br>
+      Description:<br>
+      <input type="text" name="Description" value=""><br>
+      Hit_Die:<br>
+      <input type="text" name="Hit_Die" value=""><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+    <h2>Update your class!</h2>
+    <br>
+    <form action="/form_handler.php">
+      Class_ID:<br>
+      <input type="text" name="Class_ID" placeholder="id"><br>
+
+      Class_Name:<br>
+      <input type="text" name="Class_Name" value=""><br>
+      Description:<br>
+      <input type="text" name="Description" value=""><br>
+      Hit_Die:<br>
+      <input type="text" name="Hit_Die" value=""><br>
+
+      <input type="submit" value="Update">
+    </form>
+
+    <br><br>
+    <h2>Delete your class!</h2>
+    <br>
+    <form action="/form_handler.php">
+      Class_ID:<br>
+      <input type="text" name="Class_ID" placeholder="id"><br>
+
+      <input type="submit" value="Delete">
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    armor
+    <h1>C.R.U.D. on armor</h1>
+
+    <br><br>
+    <h2>Create your armor!</h2>
+    <br>
+    <form action="/form_handler.php">
+      <!-- need this to be auto-generated, maybe don't need this here at all, only for delete? -->
+      <input type="hidden" name="Armor_ID" value="id">
+
+      Name:<br>
+      <input type="text" name="Name" value=""><br>
+      Type:<br>
+      <input type="text" name="Type" value=""><br>
+      Cost:<br>
+      <input type="text" name="Cost" value=""><br>
+      Armor_Class:<br>
+      <input type="text" name="Armor_Class" value=""><br>
+      Weight:<br>
+      <input type="text" name="Weight" value=""><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>

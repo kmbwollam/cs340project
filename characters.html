@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>C.R.U.D. on characters</h1>
+
+  <br><br>
+  <h2>Create your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    <!-- need this to be auto-generated, maybe don't need this here at all, only for delete? -->
+    <input type="hidden" name="Character_ID" value="id">
+
+    Player_First_Name:<br>
+    <input type="text" name="Player_First_Name" value=""><br>
+    Player_Last_Name:<br>
+    <input type="text" name="Player_Last_Name" value=""><br>
+    Character_Name:<br>
+    <input type="text" name="Character_Name" value=""><br>
+    Race:<br>
+    <input type="text" name="Race" value=""><br>
+    Class:<br>
+    <input type="text" name="Class" value=""><br>
+    Armor:<br>
+    <input type="text" name="Armor" value=""><br>
+    Armor_Equipped:<br>
+    <input type="text" name="Armor_Equipped" value=""><br>
+    Shield_Equipped:<br>
+    <input type="text" name="Shield_Equipped" value=""><br>
+    Level:<br>
+    <input type="text" name="Level" value=""><br>
+    Wealth:<br>
+    <input type="text" name="Wealth" value=""><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <br><br>
+  <h2>Update your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    Character_ID:<br>
+    <input type="text" name="Character_ID" placeholder="id"><br>
+
+    Player_First_Name:<br>
+    <input type="text" name="Player_First_Name" value=""><br>
+    Player_Last_Name:<br>
+    <input type="text" name="Player_Last_Name" value=""><br>
+    Character_Name:<br>
+    <input type="text" name="Character_Name" value=""><br>
+    Race:<br>
+    <input type="text" name="Race" value=""><br>
+    Class:<br>
+    <input type="text" name="Class" value=""><br>
+    Armor:<br>
+    <input type="text" name="Armor" value=""><br>
+    Armor_Equipped:<br>
+    <input type="text" name="Armor_Equipped" value=""><br>
+    Shield_Equipped:<br>
+    <input type="text" name="Shield_Equipped" value=""><br>
+    Level:<br>
+    <input type="text" name="Level" value=""><br>
+    Wealth:<br>
+    <input type="text" name="Wealth" value=""><br>
+
+    <input type="submit" value="Update">
+  </form>
+
+  <br><br>
+  <h2>Delete your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    Character_ID:<br>
+    <input type="text" name="Character_ID" placeholder="id"><br>
+
+    <input type="submit" value="Delete">
+  </form>
+
+</body>
+</html>

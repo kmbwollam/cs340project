@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    weapon_assignment
+    <h1>C.R.U.D. on weapon assignment</h1>
+
+    <br><br>
+    <h2>Create your weapon assignment!</h2>
+    <br>
+    <form action="/form_handler.php">
+      <!-- need this to be auto-generated, maybe don't need this here at all, only for delete? -->
+      <input type="hidden" name="Character_ID" value="id">
+
+      Character_Name:<br>
+      <input type="text" name="Character_Name" value=""><br>
+      Weapon_ID:<br>
+      <input type="text" name="Weapon_ID" value=""><br>
+      Weapon_Name:<br>
+      <input type="text" name="Weapon_Name" value=""><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+    <h2>Update your character!</h2>
+    <br>
+    <form action="/form_handler.php">
+      Character_ID:<br>
+      <input type="text" name="Character_ID" placeholder="id"><br>
+
+      Character_Name:<br>
+      <input type="text" name="Character_Name" value=""><br>
+      Weapon_ID:<br>
+      <input type="text" name="Weapon_ID" value=""><br>
+      Weapon_Name:<br>
+      <input type="text" name="Weapon_Name" value=""><br>
+
+      <input type="submit" value="Update">
+    </form>
+
+    <br><br>
+    <h2>Delete your character!</h2>
+    <br>
+    <form action="/form_handler.php">
+      Character_ID:<br>
+      <input type="text" name="Character_ID" placeholder="id"><br>
+      Weapon_ID:<br>
+      <input type="text" name="Weapon_ID" value=""><br>
+
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>
