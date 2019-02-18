@@ -8,7 +8,7 @@ function searchByPlayerName() {
   for (i = 0; i < rows.length; i++) {
     column = rows[i].getElementsByClassName("playerLastName")[0];
     if (column) {
-      columnText = column.textContent || column.innerText;
+      columnText = column.innerText;
       if (columnText.toLowerCase().indexOf(searchText) > -1)
         rows[i].classList.remove("hideRow");
       else
