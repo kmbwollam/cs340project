@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/styles/project-chrome.css">
+
+    <script type="text/javascript" src="assets/scripts/frontEnd/script-frontEnd.js"></script>
+
   </head>
   <body>
     dice_rolls
@@ -32,7 +44,12 @@
       <input type="hidden" name="Dice_ID" value="id">
 
       Type:<br>
-      <input type="text" name="Type" value=""><br>
+      <input list="types" name="Type">
+      <datalist id="types">
+        <option value="type 1">
+        <option value="type 2">
+      </datalist>
+      <br>
       Quantity:<br>
       <input type="text" name="Quantity" value=""><br>
 

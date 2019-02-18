@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/styles/project-chrome.css">
+
+    <script type="text/javascript" src="assets/scripts/frontEnd/script-frontEnd.js"></script>
+
   </head>
   <body>
     armor
@@ -40,11 +52,22 @@
       Name:<br>
       <input type="text" name="Name" value=""><br>
       Type:<br>
-      <input type="text" name="Type" value=""><br>
+      <!-- <input type="text" name="Armor" value=""><br> -->
+      <input list="armors" name="Type">
+      <datalist id="armors">
+        <option value="chainmail">
+        <option value="shining armor">
+      </datalist>
+      <br>
       Cost:<br>
       <input type="text" name="Cost" value=""><br>
       Armor_Class:<br>
-      <input type="text" name="Armor_Class" value=""><br>
+      <input list="classes" name="Armor_Class" value="">
+      <datalist id="classes">
+        <option value="class 1">
+        <option value="class 2">
+      </datalist>
+      <br>
       Weight:<br>
       <input type="text" name="Weight" value=""><br>
 

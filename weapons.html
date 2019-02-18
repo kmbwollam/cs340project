@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/styles/project-chrome.css">
+
+    <script type="text/javascript" src="assets/scripts/frontEnd/script-frontEnd.js"></script>
+
   </head>
   <body>
     weapons
@@ -40,23 +52,18 @@
       Name:<br>
       <input type="text" name="Name" value=""><br>
       Type:<br>
-      <input type="text" name="Type" value=""><br>
+      <input list="types" name="Type">
+      <datalist id="types">
+        <option value="type 1">
+        <option value="type 2">
+      </datalist>
+      <br>
       Cost:<br>
       <input type="text" name="Cost" value=""><br>
       Damage_Die:<br>
       <input type="text" name="Damage_Die" value=""><br>
-      Class:<br>
-      <input type="text" name="Class" value=""><br>
       Weight:<br>
       <input type="text" name="Weight" value=""><br>
-      Armor_Equipped:<br>
-      <input type="text" name="Armor_Equipped" value=""><br>
-      Shield_Equipped:<br>
-      <input type="text" name="Shield_Equipped" value=""><br>
-      Level:<br>
-      <input type="text" name="Level" value=""><br>
-      Wealth:<br>
-      <input type="text" name="Wealth" value=""><br>
 
       <input type="submit" value="Submit">
     </form>
