@@ -1,0 +1,174 @@
+  <h1>C.R.U.D. on characters</h1>
+
+  <br>
+  <h2>Look at all the pretty characters!</h2>
+  <br>
+  <h3><input type="text" id="searchTerms" onkeyup="searchByPlayerName()" placeholder="Search for your characters by entering your name.."></h3>
+
+  <table id="characterTable" class="table table-hover" style="width:100%">
+    <thead>
+      <tr>
+        <th>Character_ID</th>
+        <th>Player_First_Name</th>
+        <th>Player_Last_Name</th>
+        <th>Character_Name</th>
+        <th>Race</th>
+        <th>Class</th>
+        <th>Armor</th>
+        <th>Armor_Equipped</th>
+        <th>Shield_Equipped</th>
+        <th>Level</th>
+        <th>Wealth</th>
+      </tr>
+    </thead>
+    <tbody>
+delete this once working
+      <tr>
+        <td>1</td>
+        <td class="playerFirstName">Jim</td>
+        <td class="playerLastName">Bob</td>
+        <td>Sauron</td>
+        <td>Dragonborn</td>
+        <td>Paladin</td>
+        <td>chainmail</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>94</td>
+        <td>90210</td>
+      </tr>
+keep below once working
+
+      {{log "Look at me 111!"}}
+      {{#each workouts as |workout|}}
+      <tr id="character-row{{characters.id}}" class="character {{characters.id}}" data-id="{{characters.id}}">
+        <td class="character id {{characters.id}}">{{characters.id}}</td>
+        <td class="character playerFirstName {{characters.id}}">{{characters.playerFirstName}}</td>
+        <td class="character playerLastName {{characters.id}}">{{characters.playerLastName}}</td>
+        <td>Cleopatra</td>
+        <td>Human</td>
+        <td>Barbarian</td>
+        <td>shining armor</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>99</td>
+        <td>10000000</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <br>
+  <h2>Create your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    <!-- need this to be auto-generated, maybe don't need this here at all, only for delete? -->
+    <input type="hidden" name="Character_ID" value="id">
+
+    Player_First_Name:<br>
+    <input type="text" name="Player_First_Name" value=""><br>
+    Player_Last_Name:<br>
+    <input type="text" name="Player_Last_Name" value=""><br>
+    Character_Name:<br>
+    <input type="text" name="Character_Name" value=""><br>
+    Race:<br>
+    <input type="text" name="Race" value=""><br>
+    <!-- <select name="Race" form="input">
+      <option value="race1">race 1</option>
+      <option value="race2">race 2</option>
+    </select> -->
+    <!-- <input list="races" name="race">
+    <datalist id="races">
+      <option value="Human">
+      <option value="Dragonborn">
+    </datalist>
+    <br> -->
+    Class:<br>
+    <!-- <input type="text" name="Class" value=""><br> -->
+    <input list="classes" name="class">
+    <datalist id="classes">
+      <option value="Barbarian">
+      <option value="Paladin">
+    </datalist>
+    <br>
+    Armor:<br>
+    <!-- <input type="text" name="Armor" value=""><br> -->
+    <input list="armors" name="armor">
+    <datalist id="armors">
+      <option value="chainmail">
+      <option value="shining armor">
+    </datalist>
+    <br>
+    Armor_Equipped:<br>
+    <input type="checkbox" name="Armor_Equipped" value=""><br>
+    Shield_Equipped:<br>
+    <input type="checkbox" name="Shield_Equipped" value=""><br>
+    Level:<br>
+    <input type="text" name="Level" value=""><br>
+    Wealth:<br>
+    <input type="text" name="Wealth" value=""><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <br><br>
+  <h2>Update your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    Character_ID:<br>
+    <input type="text" name="Character_ID" value="" placeholder=""><br>
+
+    Player_First_Name:<br>
+    <input type="text" name="Player_First_Name" value=""><br>
+    Player_Last_Name:<br>
+    <input type="text" name="Player_Last_Name" value=""><br>
+    Character_Name:<br>
+    <input type="text" name="Character_Name" value=""><br>
+    Race:<br>
+    <!-- <input type="text" name="Race" value=""><br>
+    <select name="Race" form="input">
+      <option value="race1">race 1</option>
+      <option value="race2">race 2</option>
+    </select> -->
+    <input list="races" name="race">
+    <datalist id="races">
+      <option value="Human">
+      <option value="Dragonborn">
+    </datalist>
+    <br>
+    Class:<br>
+    <!-- <input type="text" name="Class" value=""><br> -->
+    <input list="classes" name="class">
+    <datalist id="classes">
+      <option value="Barbarian">
+      <option value="Paladin">
+    </datalist>
+    <br>
+    Armor:<br>
+    <!-- <input type="text" name="Armor" value=""><br> -->
+    <input list="armors" name="armor">
+    <datalist id="armors">
+      <option value="chainmail">
+      <option value="shining armor">
+    </datalist>
+    <br>
+    Armor_Equipped:<br>
+    <input type="checkbox" name="Armor_Equipped" value=""><br>
+    Shield_Equipped:<br>
+    <input type="checkbox" name="Shield_Equipped" value=""><br>
+    Level:<br>
+    <input type="text" name="Level" value=""><br>
+    Wealth:<br>
+    <input type="text" name="Wealth" value=""><br>
+
+    <input type="submit" value="Update">
+  </form>
+
+  <br><br>
+  <h2>Delete your character!</h2>
+  <br>
+  <form action="/form_handler.php">
+    Character_ID:<br>
+    <input type="text" name="Character_ID" placeholder="id"><br>
+
+    <input type="submit" value="Delete">
+  </form>

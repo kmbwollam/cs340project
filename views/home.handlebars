@@ -1,0 +1,43 @@
+<table class="table table-hover" id="workouts-list-table">
+  <thead>
+    <tr>
+      <th alt="the name of the exercise">Name</th>
+      <th alt="the number of times the exercise was performed">Reps</th>
+      <th alt="the weight of the weights used">Weight</th>
+      <!-- <th class="hideMe">Owner</th> -->
+      <th alt="the date the exercise was performed (in the format of Month-Day-Year, e.g., 05-25-2018)">Date</th>
+      <th alt="indicating if the measurement is in lbs or kg">Unit</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{log "Look at me 111!"}}
+      {{#each workouts as |workout|}}
+      <form class="workout workout-form {{workout.id}} update-item container" data-id="row-{{workout.id}}" id="workout-form{{workout.id}}">
+          <tr class="workout {{workout.id}}" data-id="{{workout.id}}" id="workout-row{{workout.id}}">
+              <td><input type="text" value="{{workout.name}}" class="workout update input {{{workout.id}}} name" text="{{{workout.name}}}" placeholder="{{workout.name}}" required id="name-{{workout.id}}" data-id="{{workout.id}}" /></td>
+              <td><input type="text" value="{{workout.reps}}" class="workout update input {{workout.id}} reps" text="{{workout.reps}}" placeholder="{{workout.reps}}" id="reps-{{workout.id}}" data-id="{{workout.id}}" /></td>
+              <td><input type="text" value="{{workout.weight}}" class="workout update input {{workout.id}} weight" text="{{workout.weight}}" placeholder="{{workout.weight}}" id="weight-{{workout.id}}" data-id="{{workout.id}}" /></td>
+              <td><input type="text" class="workout update input {{workout.id}} date" text="{{workout.date}}" placeholder="{{workout.date}}" id="date-{{workout.id}}" data-id="{{workout.id}}" /></td>
+              {{#if workout.lbs}}
+              <td>
+                  lbs: <input type="radio" text="lbs" value="1" checked="checked" name="unit-{{workout.id}}" class="workout update input {{workout.id}} lbs" id="lbs-{{workout.id}}" data-id="{{workout.id}}" />
+                  <br />
+                  kgs: <input type="radio" text="kgs" value="0" name="unit-{{workout.id}}" class="workout update input {{workout.id}} kg" id="kg-{{workout.id}}" data-id="{{workout.id}}" />
+              </td>
+              {{else}}
+              <td>
+                  lbs: <input type="radio" text="lbs" value="1" name="unit-{{workout.id}}" class="workout update input {{workout.id}} lbs" id="lbs-{{workout.id}}" data-id="{{workout.id}}" />
+                  <br />
+                  kgs: <input type="radio" text="kgs" value="0" checked="checked" name="unit-{{workout.id}}" class="workout update input {{workout.id}} kg" id="kg-{{workout.id}}" data-id="{{workout.id}}" />
+              </td>
+              {{/if}}
+              <td><input type="submit" onclick="onUpdateWorkout({{workout.id}})" value="Update it Lars!" class="btn btn-default glyphicon workout update submit {{workout.id}}" id="update-{{workout.id}}" data-id="{{workout.id}}" /></td>
+              <td><input type="submit" onclick="deleteWorkout({{workout.id}})" value="Delete it Lars!" class="btn btn-default glyphicon workout delete submit {{workout.id}}" id="delete-{{workout.id}}" data-id="{{workout.id}}" /></td>
+          </tr>
+          <input type="hidden" value="{{workout.id}}" class="btn btn-default glyphicon workout delete submit {{workout.id}}" id="hidden-id-{{workout.id}}" data-id="{{workout.id}}" />
+      </form>
+      {{/each}}
+  </tbody>
+</table>
